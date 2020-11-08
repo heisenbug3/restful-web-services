@@ -1,14 +1,12 @@
 package com.heisenbug3.rest.webservices.restfulwebservices.filtering;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
+@JsonFilter(("SomeBeanFilter"))
 public class SomeBean {
 
 	private String field1;
 	private String field2;
-
-	@JsonIgnore
 	private String field3;
 
 	public SomeBean(String field1, String field2, String field3) {
